@@ -1,0 +1,200 @@
+body {
+  background: #008080;
+  margin: 0;
+  padding: 0;
+  font-family: 'MS Sans Serif', Arial, sans-serif;
+  font-size: 11px;
+  overflow: hidden;
+}
+
+.desktop {
+  height: calc(100vh - 28px);
+  padding: 20px;
+}
+
+.window {
+  background: #c0c0c0;
+  border: 2px solid;
+  border-color: #ffffff #000000 #000000 #ffffff;
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
+  max-width: 800px;
+  min-height: 500px;
+  margin: 0 auto;
+  display: flex; /* Use flexbox for window content */
+  flex-direction: column; /* Stack elements vertically */
+}
+
+.title-bar {
+  background: linear-gradient(90deg, #000080, #1084d0);
+  color: #ffffff;
+  padding: 3px 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  flex-shrink: 0; /* Prevent title bar from shrinking */
+}
+
+.title-buttons {
+  display: flex;
+  gap: 2px;
+}
+
+.title-btn {
+  background: #c0c0c0;
+  border: 1px solid;
+  border-color: #ffffff #000000 #000000 #ffffff;
+  width: 16px;
+  height: 14px;
+  font-size: 10px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.title-btn:active {
+  border-color: #000000 #ffffff #ffffff #000000;
+}
+
+.menu-bar {
+  background: #c0c0c0;
+  padding: 3px 5px;
+  border-bottom: 1px solid #808080;
+  flex-shrink: 0; /* Prevent menu bar from shrinking */
+}
+
+.menu-bar span {
+  padding: 3px 8px;
+  cursor: pointer;
+}
+
+.menu-bar span:hover {
+  background: #000080;
+  color: #ffffff;
+}
+
+.toolbar {
+  background: #c0c0c0;
+  padding: 5px;
+  border-bottom: 1px solid #808080;
+  display: flex;
+  gap: 3px;
+  flex-shrink: 0; /* Prevent toolbar from shrinking */
+}
+
+.tool-btn {
+  background: #c0c0c0;
+  border: 2px solid;
+  border-color: #ffffff #000000 #000000 #ffffff;
+  padding: 3px 8px;
+  cursor: pointer;
+}
+
+.tool-btn:active {
+  border-color: #000000 #ffffff #ffffff #000000;
+}
+
+.window-content {
+  background: #ffffff;
+  padding: 20px;
+  flex-grow: 1; /* Allow content to grow and fill available space */
+  overflow-y: auto; /* Enable scrolling for content */
+  box-sizing: border-box; /* Include padding in height calculation */
+}
+
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 80px);
+  gap: 20px;
+}
+
+.desktop-icon {
+  text-align: center;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.desktop-icon:hover {
+  background: rgba(0, 0, 128, 0.1);
+}
+
+.icon {
+  font-size: 32px;
+  margin-bottom: 5px;
+}
+
+.icon-label {
+  font-size: 11px;
+  word-wrap: break-word;
+}
+
+.status-bar {
+  background: #c0c0c0;
+  border-top: 1px solid #ffffff;
+  padding: 3px 5px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  flex-shrink: 0; /* Prevent status bar from shrinking */
+}
+
+.taskbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 28px;
+  background: #c0c0c0;
+  border-top: 2px solid #ffffff;
+  display: flex;
+  align-items: center;
+  padding: 2px;
+}
+
+.start-button {
+  background: #c0c0c0;
+  border: 2px solid;
+  border-color: #ffffff #000000 #000000 #ffffff;
+  padding: 2px 5px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.start-button:active {
+  border-color: #000000 #ffffff #ffffff #000000;
+}
+
+.start-icon {
+  font-size: 16px;
+}
+
+.taskbar-items {
+  flex: 1;
+  display: flex;
+  gap: 2px;
+  margin-left: 5px;
+}
+
+.taskbar-item {
+  background: #c0c0c0;
+  border: 2px solid;
+  border-color: #000000 #ffffff #ffffff #000000;
+  padding: 3px 8px;
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.taskbar-item.active {
+  border-color: #ffffff #000000 #000000 #ffffff;
+}
+
+.system-tray {
+  border-left: 1px solid #808080;
+  padding: 0 8px;
+  display: flex;
+  align-items: center;
+}
